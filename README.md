@@ -17,5 +17,5 @@ Reach out to me to gain access to my private Flutter  & Pure Native/Web Mobile R
 Here are the links to each project:
 
 
-* [Flutter - Portfolio](https://github.com/Amo-Addai/flutter-portfolio)  ([repo](https://github.com/Amo-Addai/flutter-portfolio))
+* [Flutter - Portfolio](https://github.com/Amo-Addai/flutter-portfolio)  ([in progress](https://github.com/Amo-Addai/flutter-portfolio))
 
