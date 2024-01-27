@@ -9,9 +9,3 @@ UI styles like Material, Argon, and more, blended seamlessly with Flutter & Pure
 
 It will be a playground for dynamic tech stack combinations, in Mobile app frameworks only (Ongoing project, as my public code will be released in timely intervals). 
 
-
-Reach out to me to gain access to my private Flutter  & Pure Native/Web Mobile Repositories.
-
-
-Here are the links to each project:
-
