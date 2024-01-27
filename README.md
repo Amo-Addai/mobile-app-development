@@ -1,7 +1,6 @@
 
-
-# [Auto-Mobile-Portfolio - Mobile App Projects](#)
-<!-- (https://www.auto-mobile-portfolio.AUTO.com) -->
+# [Mobile-App Development Portfolio](#)
+<!-- (https://www.mobile-app-portfolio.AUTO.com) -->
 
 
 Explore my GitHub Mono-Repo Hub of innovation with diverse mobile app projects in Flutter, Pure Native (Android, iOS, Windows Phone / Universal Windows Platform - UWP / .NET MAUI), and Web Mobile (React Native, Ionic, NativeScript, etc) specifically. 
@@ -15,7 +14,4 @@ Reach out to me to gain access to my private Flutter  & Pure Native/Web Mobile R
 
 
 Here are the links to each project:
-
-
-* [Flutter - Portfolio](https://github.com/Amo-Addai/flutter-portfolio)  ([in progress](https://github.com/Amo-Addai/flutter-portfolio))
 
