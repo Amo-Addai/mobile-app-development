@@ -1,0 +1,33 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Invoice.cs">
+    <Files>
+      <File FileName="win-phone-scaffolding.txt" Line="9" Column="14" />
+      <File FileName="Package.appxmanifest" Line="5" Column="65" />
+      <File FileName="Properties/AssemblyInfo.cs" Line="1" Column="1" />
+      <File FileName="EmptyXmlFile.xml" Line="7" Column="15" />
+      <File FileName="App.xaml.cs" Line="33" Column="8" />
+      <File FileName="Sample.xaml" Line="13" Column="8" />
+      <File FileName="Sample.cs" Line="26" Column="1" />
+      <File FileName="MainPage.xaml" Line="67" Column="55" />
+      <File FileName="MainPage.xaml.cs" Line="57" Column="57" />
+      <File FileName="Invoice.cs" Line="14" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="sample-win-phone" expanded="True">
+            <Node name="Solution Items" expanded="True">
+              <Node name="Models" expanded="True">
+                <Node name="/Users/kwadwo/Desktop/AUTOMAN/autocode/github/auto_portfolios/auto-portfolio - samples/mobile-app-development/windows-phone/sample-win-phone/Invoice.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MultiItemStartupConfigurations />
+</Properties>

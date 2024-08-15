@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1705.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assets", "Assets", "{6D986B62-1385-4D1D-9CC1-8AC7AB3F1551}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E361B329-0599-4EF4-A7F4-3923A7DC2D9B}"
+	ProjectSection(SolutionItems) = preProject
+		App.xaml = App.xaml
+		MainPage.xaml = MainPage.xaml
+		App.xaml.cs = App.xaml.cs
+		MainPage.xaml.cs = MainPage.xaml.cs
+		Package.appxmanifest = Package.appxmanifest
+		Properties\AssemblyInfo.cs = Properties\AssemblyInfo.cs
+		win-phone-scaffolding.txt = win-phone-scaffolding.txt
+		Sample.xaml = Sample.xaml
+		Sample.cs = Sample.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{F90BF14E-D994-4A5C-823A-3A234EA02051}"
+	ProjectSection(SolutionItems) = preProject
+		Invoice.cs = Invoice.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ViewModels", "ViewModels", "{C06B859B-B98C-431C-ABC1-FF824D763CB5}"
+	ProjectSection(SolutionItems) = preProject
+		InvoiceViewModel.cs = InvoiceViewModel.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Commands", "Commands", "{4D21F3E9-B696-4E4C-A0CB-A470A96CB433}"
+	ProjectSection(SolutionItems) = preProject
+		PayCommand.cs = PayCommand.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {54E9FB12-42BB-4066-8F6B-469032776A74}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F90BF14E-D994-4A5C-823A-3A234EA02051} = {E361B329-0599-4EF4-A7F4-3923A7DC2D9B}
+		{6D986B62-1385-4D1D-9CC1-8AC7AB3F1551} = {E361B329-0599-4EF4-A7F4-3923A7DC2D9B}
+		{C06B859B-B98C-431C-ABC1-FF824D763CB5} = {E361B329-0599-4EF4-A7F4-3923A7DC2D9B}
+		{4D21F3E9-B696-4E4C-A0CB-A470A96CB433} = {E361B329-0599-4EF4-A7F4-3923A7DC2D9B}
+	EndGlobalSection
+EndGlobal
