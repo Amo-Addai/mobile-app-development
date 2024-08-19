@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "aNlGCmK5PO2P8ykbZEi0c5xJtk+6APum4I97ryQiwAlUMyl/JMLe7ODaYn/VRX93hsqrLGVxeItdSjr4Lqakew==",
+  "dgSpecHash": "INk9Bv1Q1j3JOsLB8Mz29mcZV5pmzbQmEc4v1YUQQVjUPo98sWRy+1y7iO7nPcrqhVrWyoL60HYLo5Ox/SPydw==",
   "success": false,
   "projectFilePath": "/Users/kwadwo/Desktop/AUTOMAN/autocode/github/auto_portfolios/auto-portfolio - samples/mobile-app-development/xamarin/travel-record-app/travel-record-app/travel-record-app/travel-record-app.csproj",
   "expectedPackageFiles": [],
@@ -9,13 +9,13 @@
       "code": "NU1301",
       "level": "Error",
       "message": "Unable to load the service index for source https://api.nuget.org/v3/index.json.",
-      "libraryId": "Xamarin.Essentials"
+      "libraryId": "NETStandard.Library"
     },
     {
       "code": "NU1301",
       "level": "Error",
       "message": "Unable to load the service index for source https://api.nuget.org/v3/index.json.",
-      "libraryId": "NETStandard.Library"
+      "libraryId": "Xamarin.Essentials"
     },
     {
       "code": "NU1301",

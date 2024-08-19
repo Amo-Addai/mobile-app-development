@@ -14,7 +14,6 @@
 		34D2F03E2C71F59600065AA5 /* restart_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2F03D2C71F59600065AA5 /* restart_appTests.swift */; };
 		34D2F0482C71F59600065AA5 /* restart_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2F0472C71F59600065AA5 /* restart_appUITests.swift */; };
 		34D2F04A2C71F59600065AA5 /* restart_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2F0492C71F59600065AA5 /* restart_appUITestsLaunchTests.swift */; };
-		34D2F0572C71F7D500065AA5 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 34D2F0562C71F7D500065AA5 /* Assets */; };
 		34D2F05D2C71FDC500065AA5 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2F05C2C71FDC500065AA5 /* OnboardingView.swift */; };
 		34D2F05F2C71FDEB00065AA5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2F05E2C71FDEB00065AA5 /* HomeView.swift */; };
 		34D2F0612C71FDFE00065AA5 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2F0602C71FDFE00065AA5 /* SwiftUIView.swift */; };
@@ -49,7 +48,6 @@
 		34D2F0432C71F59600065AA5 /* restart-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "restart-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34D2F0472C71F59600065AA5 /* restart_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = restart_appUITests.swift; sourceTree = "<group>"; };
 		34D2F0492C71F59600065AA5 /* restart_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = restart_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		34D2F0562C71F7D500065AA5 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Assets; path = "../../resources/Restart-App/Resources/Assets"; sourceTree = "<group>"; };
 		34D2F05B2C71FD1400065AA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		34D2F05C2C71FDC500065AA5 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		34D2F05E2C71FDEB00065AA5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -108,7 +106,6 @@
 				34D2F05B2C71FD1400065AA5 /* Info.plist */,
 				34D2F05A2C71FAC000065AA5 /* Utilities */,
 				34D2F0592C71FAA100065AA5 /* Views */,
-				34D2F0562C71F7D500065AA5 /* Assets */,
 				34D2F02C2C71F59500065AA5 /* restart_appApp.swift */,
 				34D2F0582C71FA1200065AA5 /* Screens */,
 				34D2F0302C71F59600065AA5 /* Assets.xcassets */,
@@ -273,7 +270,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				34D2F0342C71F59600065AA5 /* Preview Assets.xcassets in Resources */,
-				34D2F0572C71F7D500065AA5 /* Assets in Resources */,
 				34D2F0312C71F59600065AA5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

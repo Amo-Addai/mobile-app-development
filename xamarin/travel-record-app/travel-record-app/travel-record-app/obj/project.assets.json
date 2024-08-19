@@ -73,7 +73,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "/Users/kwadwo/Library/Caches/VisualStudio/17.0/MSBuild/43807_3/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/Users/kwadwo/Library/Caches/VisualStudio/17.0/MSBuild/82593_3/RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -82,13 +82,13 @@
       "code": "NU1301",
       "level": "Error",
       "message": "Unable to load the service index for source https://api.nuget.org/v3/index.json.",
-      "libraryId": "Xamarin.Essentials"
+      "libraryId": "NETStandard.Library"
     },
     {
       "code": "NU1301",
       "level": "Error",
       "message": "Unable to load the service index for source https://api.nuget.org/v3/index.json.",
-      "libraryId": "NETStandard.Library"
+      "libraryId": "Xamarin.Essentials"
     },
     {
       "code": "NU1301",

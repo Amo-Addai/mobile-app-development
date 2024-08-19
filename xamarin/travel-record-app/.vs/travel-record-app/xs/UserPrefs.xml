@@ -1,6 +1,40 @@
 ﻿<Properties StartupConfiguration="{08C267A3-52ED-49BD-A440-D963F73AEFB5}|Default">
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.travel-record-app.iOS FirstBuild="True" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.travel-record-app FirstBuild="True" />
-  <MonoDevelop.Ide.ItemProperties.travel-record-app.Android FirstBuild="True" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.Pixel_3a_API_32_arm64-v8a" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.travel-record-app.Android PreferredExecutionTarget="Android.Pixel_3a_API_32_arm64-v8a" FirstBuild="True" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="travel-record-app/travel-record-app/Pages/NewTravelPage.xaml.cs">
+    <Files>
+      <File FileName="travel-record-app/travel-record-app/AssemblyInfo.cs" Line="4" Column="1" />
+      <File FileName="travel-record-app/travel-record-app/App.xaml" Line="1" Column="1" />
+      <File FileName="travel-record-app/travel-record-app/App.xaml.cs" Line="1" Column="1" />
+      <File FileName="travel-record-app/travel-record-app/MainPage.xaml.cs" Line="20" Column="1" />
+      <File FileName="travel-record-app/travel-record-app/Pages/LoginPage.xaml" Line="1" Column="1" />
+      <File FileName="travel-record-app/travel-record-app/Pages/LoginPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="travel-record-app/travel-record-app/Models/Post.cs" Line="19" Column="1" />
+      <File FileName="travel-record-app/travel-record-app/Pages/NewTravelPage.xaml" Line="20" Column="44" />
+      <File FileName="travel-record-app/travel-record-app/Pages/NewTravelPage.xaml.cs" Line="7" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="travel-record-app" expanded="True">
+            <Node name="travel-record-app" expanded="True">
+              <Node name="Models" expanded="True" />
+              <Node name="Pages" expanded="True" />
+              <Node name="Setup" expanded="True" />
+            </Node>
+            <Node name="travel-record-app.Android" expanded="True" />
+            <Node name="travel-record-app.iOS" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
 </Properties>
