@@ -16,6 +16,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		win-phone-scaffolding.txt = win-phone-scaffolding.txt
 		Sample.xaml = Sample.xaml
 		Sample.cs = Sample.cs
+		SamplePage.xaml.cs = SamplePage.xaml.cs
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{F90BF14E-D994-4A5C-823A-3A234EA02051}"
@@ -31,6 +32,32 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Commands", "Commands", "{4D21F3E9-B696-4E4C-A0CB-A470A96CB433}"
 	ProjectSection(SolutionItems) = preProject
 		PayCommand.cs = PayCommand.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pages", "Pages", "{327779F3-310C-4BA8-966F-1EE29AB3B730}"
+	ProjectSection(SolutionItems) = preProject
+		Page-1.xaml.cs = Page-1.xaml.cs
+		Page-2.xaml.cs = Page-2.xaml.cs
+		Page-1.xaml = Page-1.xaml
+		Page-2.xaml = Page-2.xaml
+		Settings.xaml.cs = Settings.xaml.cs
+		Settings.xaml = Settings.xaml
+		LocalStorage.xaml = LocalStorage.xaml
+		Gestures.xaml = Gestures.xaml
+		Notifications.xaml = Notifications.xaml
+		SystemApps.xaml = SystemApps.xaml
+		LiveTiles.xaml = LiveTiles.xaml
+		Gestures.xaml.cs = Gestures.xaml.cs
+		LocalStorage.xaml.cs = LocalStorage.xaml.cs
+		Notifications.xaml.cs = Notifications.xaml.cs
+		SystemApps.xaml.cs = SystemApps.xaml.cs
+		LiveTiles.xaml.cs = LiveTiles.xaml.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Components", "Components", "{311D83D2-112D-4D98-980E-220996B6A360}"
+	ProjectSection(SolutionItems) = preProject
+		ToastSample.xml = ToastSample.xml
+		TileSample.xml = TileSample.xml
 	EndProjectSection
 EndProject
 Global
@@ -49,5 +76,7 @@ Global
 		{6D986B62-1385-4D1D-9CC1-8AC7AB3F1551} = {E361B329-0599-4EF4-A7F4-3923A7DC2D9B}
 		{C06B859B-B98C-431C-ABC1-FF824D763CB5} = {E361B329-0599-4EF4-A7F4-3923A7DC2D9B}
 		{4D21F3E9-B696-4E4C-A0CB-A470A96CB433} = {E361B329-0599-4EF4-A7F4-3923A7DC2D9B}
+		{327779F3-310C-4BA8-966F-1EE29AB3B730} = {E361B329-0599-4EF4-A7F4-3923A7DC2D9B}
+		{311D83D2-112D-4D98-980E-220996B6A360} = {E361B329-0599-4EF4-A7F4-3923A7DC2D9B}
 	EndGlobalSection
 EndGlobal

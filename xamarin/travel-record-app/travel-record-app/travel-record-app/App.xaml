@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="travel_record_app.App">
+    <Application.Resources> <!-- global resources for entire app -->
+
+        <ResourceDictionary>
+
+            <Color x:Key="BlueColor">
+                <!-- blue color-code -->
+                #1E90FF
+            </Color>
+
+            <Color x:Key="WhiteColor">
+                #FFFFFF
+            </Color>
+
+            <!-- Implicit styles -->
+            <Style x:Key="ButtonStyle"
+                   TargetType="Button">
+
+                <Setter Property="BackgroundColor"
+                        Value="{StaticResource BlueColor}" />
+
+                <Setter Property="TextColor"
+                        Value="{StaticResource WhiteColor}" />
+
+            </Style>
+
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>

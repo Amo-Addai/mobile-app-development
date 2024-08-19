@@ -1,0 +1,63 @@
+﻿<Page
+    x:Class="SampleWinPhone.Sample"
+    xmlns="microsoft winfx xaml namespace url presentation"
+    xmlns:x="microsoft winfx xaml namespace url"
+    xmlns:local="using:SampleWinPhone"
+    xmlns:d="microsoft winfx xaml blend url"
+    xmlns:mc="microsoft winfx xaml markup-compatibility url"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+
+        <TextBox
+            Name="textSettingName"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Width="400"
+            Margin="0, 24, 0, 0"
+            FontSize="25"
+            TextWrapping="Wrap"
+            PlaceholderText="Setting Name" />
+
+        <TextBox
+            Name="textSettingValue"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Width="400"
+            Margin="0, 80, 0, 0"
+            FontSize="25"
+            TextWrapping="Wrap"
+            PlaceholderText="Setting Value" />
+
+        <Button
+            Name="buttonSave"
+            Content="Save"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Width="150"
+            Margin="0, 125, 0, 0"
+            FontSize="25"
+            Click="buttonSave_Click" />
+
+        <Button
+            Name="buttonRetrieve"
+            Content="Retrieve"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Width="150"
+            Margin="0, 125, 0, 0"
+            FontSize="25"
+            Click="buttonRetrieve_Click" />
+
+        <ListView
+            Name="listSettings"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Height="350"
+            Width="400"
+            Margin="0, 288, 0, 0" />
+
+    </Grid>
+
+</Page>

@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="SampleWinPhone.Sample"
+    xmlns="microsoft winfx xaml namespace url presentation"
+    xmlns:x="microsoft winfx xaml namespace url"
+    xmlns:local="using:SampleWinPhone"
+    xmlns:d="microsoft winfx xaml blend url"
+    xmlns:mc="microsoft winfx xaml markup-compatibility url"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel>
+        <TextBlock>MY APPLICATION</TextBlock>
+        <TextBlock>Page 2</TextBlock>
+
+
+        <Button Click="Button_Click_1">Go to Page 1</Button>
+
+        <TextBox
+            x:Name="textParam"></TextBox>
+
+    </StackPanel>
+
+</Page>

@@ -1,0 +1,74 @@
+{
+  "version": 3,
+  "targets": {
+    "MonoAndroid,Version=v13.0": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    "MonoAndroid,Version=v13.0": [
+      "Xamarin.Essentials >= 1.7.0",
+      "Xamarin.Forms >= 5.0.0.2196"
+    ]
+  },
+  "packageFolders": {
+    "/Users/kwadwo/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/kwadwo/Desktop/AUTOMAN/autocode/github/auto_portfolios/auto-portfolio - samples/mobile-app-development/xamarin/sample/sample/sample.Android/sample.Android.csproj",
+      "projectName": "sample.Android",
+      "projectPath": "/Users/kwadwo/Desktop/AUTOMAN/autocode/github/auto_portfolios/auto-portfolio - samples/mobile-app-development/xamarin/sample/sample/sample.Android/sample.Android.csproj",
+      "packagesPath": "/Users/kwadwo/.nuget/packages/",
+      "outputPath": "/Users/kwadwo/Desktop/AUTOMAN/autocode/github/auto_portfolios/auto-portfolio - samples/mobile-app-development/xamarin/sample/sample/sample.Android/obj/",
+      "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "configFilePaths": [
+        "/Users/kwadwo/.config/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "monoandroid13.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "monoandroid13.0": {
+          "projectReferences": {
+            "/Users/kwadwo/Desktop/AUTOMAN/autocode/github/auto_portfolios/auto-portfolio - samples/mobile-app-development/xamarin/sample/sample/sample/sample.csproj": {
+              "projectPath": "/Users/kwadwo/Desktop/AUTOMAN/autocode/github/auto_portfolios/auto-portfolio - samples/mobile-app-development/xamarin/sample/sample/sample/sample.csproj"
+            }
+          }
+        }
+      }
+    },
+    "frameworks": {
+      "monoandroid13.0": {
+        "dependencies": {
+          "Xamarin.Essentials": {
+            "target": "Package",
+            "version": "[1.7.0, )"
+          },
+          "Xamarin.Forms": {
+            "target": "Package",
+            "version": "[5.0.0.2196, )"
+          }
+        }
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://api.nuget.org/v3/index.json.",
+      "libraryId": "Xamarin.Essentials"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://api.nuget.org/v3/index.json.",
+      "libraryId": "Xamarin.Forms"
+    }
+  ]
+}

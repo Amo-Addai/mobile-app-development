@@ -1,0 +1,21 @@
+﻿<Page
+    x:Class="SampleWinPhone.Sample"
+    xmlns="microsoft winfx xaml namespace url presentation"
+    xmlns:x="microsoft winfx xaml namespace url"
+    xmlns:local="using:SampleWinPhone"
+    xmlns:d="microsoft winfx xaml blend url"
+    xmlns:mc="microsoft winfx xaml markup-compatibility url"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel>
+
+        <Button
+            Name="buttonEnable"
+            Content="Enable Live Tile"
+            HorizontalAlignment="Center"
+            Click="buttonEnable_Click" />
+
+    </StackPanel>
+
+</Page>

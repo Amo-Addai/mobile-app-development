@@ -1,0 +1,5 @@
+﻿
+
+- Manage NuGet Packages
+    - sqlite-net-pcl - install latest stable version to project (+ .android & .ios)
+

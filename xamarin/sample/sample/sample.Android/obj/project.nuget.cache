@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "7/uCzu/D4wSujilqLZtJC3SOZpj62HMOpH12ulMDUaYPu59RsIeIx61JlKAbiZ0vX13agOYewJ72Foanii0pvA==",
+  "success": false,
+  "projectFilePath": "/Users/kwadwo/Desktop/AUTOMAN/autocode/github/auto_portfolios/auto-portfolio - samples/mobile-app-development/xamarin/sample/sample/sample.Android/sample.Android.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://api.nuget.org/v3/index.json.",
+      "libraryId": "Xamarin.Essentials"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://api.nuget.org/v3/index.json.",
+      "libraryId": "Xamarin.Forms"
+    }
+  ]
+}

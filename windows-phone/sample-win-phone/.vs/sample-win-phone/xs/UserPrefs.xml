@@ -1,33 +1,57 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Invoice.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="LiveTiles.xaml.cs">
     <Files>
-      <File FileName="win-phone-scaffolding.txt" Line="9" Column="14" />
-      <File FileName="Package.appxmanifest" Line="5" Column="65" />
+      <File FileName="win-phone-scaffolding.txt" />
+      <File FileName="Package.appxmanifest" Line="16" Column="1" />
       <File FileName="Properties/AssemblyInfo.cs" Line="1" Column="1" />
-      <File FileName="EmptyXmlFile.xml" Line="7" Column="15" />
-      <File FileName="App.xaml.cs" Line="33" Column="8" />
+      <File FileName="App.xaml.cs" Line="19" Column="1" />
       <File FileName="Sample.xaml" Line="13" Column="8" />
-      <File FileName="Sample.cs" Line="26" Column="1" />
-      <File FileName="MainPage.xaml" Line="67" Column="55" />
-      <File FileName="MainPage.xaml.cs" Line="57" Column="57" />
-      <File FileName="Invoice.cs" Line="14" Column="1" />
+      <File FileName="SamplePage.xaml.cs" Line="36" Column="1" />
+      <File FileName="Sample.cs" Line="16" Column="1" />
+      <File FileName="MainPage.xaml" Line="128" Column="1" />
+      <File FileName="MainPage.xaml.cs" Line="16" Column="1" />
+      <File FileName="InvoiceViewModel.cs" Line="81" Column="1" />
+      <File FileName="Invoice.cs" Line="6" Column="1" />
+      <File FileName="PayCommand.cs" Line="55" Column="131" />
+      <File FileName="Page-1.xaml" Line="20" Column="8" />
+      <File FileName="Page-1.xaml.cs" Line="44" Column="57" />
+      <File FileName="Page-2.xaml" Line="23" Column="8" />
+      <File FileName="Page-2.xaml.cs" Line="34" Column="1" />
+      <File FileName="Gestures.xaml" Line="26" Column="8" />
+      <File FileName="Gestures.xaml.cs" Line="96" Column="1" />
+      <File FileName="LocalStorage.xaml" Line="39" Column="26" />
+      <File FileName="LocalStorage.xaml.cs" Line="34" Column="1" />
+      <File FileName="Settings.xaml" Line="59" Column="37" />
+      <File FileName="Settings.xaml.cs" Line="55" Column="28" />
+      <File FileName="ToastSample.xml" Line="9" Column="9" />
+      <File FileName="Notifications.xaml" Line="20" Column="8" />
+      <File FileName="Notifications.xaml.cs" Line="57" Column="1" />
+      <File FileName="SystemApps.xaml" Line="29" Column="1" />
+      <File FileName="SystemApps.xaml.cs" Line="65" Column="1" />
+      <File FileName="Tile.xml" Line="17" Column="1" />
+      <File FileName="LiveTiles.xaml" Line="21" Column="8" />
+      <File FileName="LiveTiles.xaml.cs" Line="58" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="sample-win-phone" expanded="True">
             <Node name="Solution Items" expanded="True">
-              <Node name="Models" expanded="True">
-                <Node name="/Users/kwadwo/Desktop/AUTOMAN/autocode/github/auto_portfolios/auto-portfolio - samples/mobile-app-development/windows-phone/sample-win-phone/Invoice.cs" selected="True" />
-              </Node>
+              <Node name="Assets" selected="True" />
+              <Node name="Components" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Pages" expanded="True" />
+              <Node name="ViewModels" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

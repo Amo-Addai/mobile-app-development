@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:travel_record_app"
+             x:Class="travel_record_app.Pages.TabbedPage"> <!-- travel_record_app.Pages ? - <Page /> -->
+
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem Text="Add"
+                     Clicked="ToolbarItem_Clicked" />
+
+    </TabbedPage.ToolbarItems>
+
+    <!--Pages can be added as references or inline-->
+    <!-- <ContentPage Title="Tab 1" /> -->
+
+    <local:HistoryPage Title="History" />
+    <local:MapPage Title="Map" />
+    <local:ProfilePage Title="Profile" />
+
+</TabbedPage>

@@ -1,0 +1,67 @@
+﻿<Properties StartupConfiguration="{CC8A158F-71D9-41B3-95FE-8B54A85A3E6A}|Default">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.sample.Android PreferredExecutionTarget="Android.Pixel_3a_API_32_arm64-v8a" FirstBuild="True" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.Pixel_3a_API_32_arm64-v8a" />
+  <MonoDevelop.Ide.ItemProperties.sample.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.1CFC6430-C6C3-4FA0-B690-CC04C776E581" FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="sample/sample/AssemblyInfo.cs">
+    <Files>
+      <File FileName="sample/sample/Setup/setup.txt" Line="6" Column="1" />
+      <File FileName="sample/sample/AssemblyInfo.cs" Line="4" Column="1" />
+      <File FileName="sample/sample.Android/MainActivity.cs" Line="33" Column="15" />
+      <File FileName="sample/sample.iOS/Main.cs" Line="1" Column="1" />
+      <File FileName="sample/sample.iOS/AppDelegate.cs" Line="39" Column="1" />
+      <File FileName="sample/sample/App.xaml" Line="34" Column="1" />
+      <File FileName="sample/sample/App.xaml.cs" Line="22" Column="34" />
+      <File FileName="sample/sample/MainPage.xaml" Line="45" Column="1" />
+      <File FileName="sample/sample/MainPage.xaml.cs" Line="26" Column="1" />
+      <File FileName="sample/sample/Pages/LoginPage.xaml" Line="42" Column="13" />
+      <File FileName="sample/sample/Pages/LoginPage.xaml.cs" Line="32" Column="13" />
+      <File FileName="sample/sample/Pages/HomePage.xaml" Line="7" Column="1" />
+      <File FileName="sample/sample/Pages/HomePage.xaml.cs" Line="1" Column="1" />
+      <File FileName="sample/sample/Pages/HistoryPage.xaml" Line="12" Column="23" />
+      <File FileName="sample/sample/Pages/HistoryPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="sample/sample/Pages/MapPage.xaml" Line="10" Column="23" />
+      <File FileName="sample/sample/Pages/MapPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="sample/sample/Pages/ProfilePage.xaml" Line="12" Column="23" />
+      <File FileName="sample/sample/Pages/ProfilePage.xaml.cs" Line="1" Column="1" />
+      <File FileName="sample/sample/Pages/NewTravelPage.xaml" Line="10" Column="30" />
+      <File FileName="sample/sample/Pages/NewTravelPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="sample/sample/Pages/NewTravelTabbedPage.xaml" Line="5" Column="83" />
+      <File FileName="sample/sample/Pages/NewTravelTabbedPage.xaml.cs" Line="26" Column="1" />
+      <File FileName="sample/sample/Models/Post.cs" Line="2" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="sample" expanded="True">
+            <Node name="sample" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="Pages" expanded="True" selected="True">
+                <Node name="HistoryPage.xaml" expanded="True" />
+                <Node name="HomePage.xaml" expanded="True" />
+                <Node name="LoginPage.xaml" expanded="True" />
+                <Node name="MapPage.xaml" expanded="True" />
+                <Node name="NewTravelPage.xaml" expanded="True" />
+                <Node name="NewTravelTabbedPage.xaml" expanded="True" />
+                <Node name="ProfilePage.xaml" expanded="True" />
+              </Node>
+              <Node name="Setup" expanded="True" />
+            </Node>
+            <Node name="sample.Android" expanded="True">
+              <Node name="Properties" expanded="True" />
+            </Node>
+            <Node name="sample.iOS" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>

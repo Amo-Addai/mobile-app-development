@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="travel_record_app.Pages.NewTravelPage">
+
+    <ContentPage.ToolbarItems>
+
+        <ToolbarItem Text="Save"
+                     Clicked="ToolbarItem_Clicked" />
+
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+
+        <StackLayout>
+
+            <Label>New Travel Page</Label>
+
+            <Entry x:Name="ExperienceEntry"
+                   Placeholder="Write your experience" />
+
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
+

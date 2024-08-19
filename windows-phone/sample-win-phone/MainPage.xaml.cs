@@ -32,11 +32,11 @@ namespace Application
 
             var button = new Button
             {
-              Content = "Click Me"
-              Background = "Blue" // * enum
+                Content = "Click Me"
+                Background = "Blue" // * enum
             };
 
-            button.Background = new SolidColorBrush("Green"); // * SolidColorBrush ( string/enum )
+            button.Background = new SolidColorBrush(Colors.Green);
 
             var list = new List<GradientStop>
             {

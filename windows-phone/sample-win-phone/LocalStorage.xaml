@@ -1,0 +1,55 @@
+﻿<Page
+    x:Class="SampleWinPhone.Sample"
+    xmlns="microsoft winfx xaml namespace url presentation"
+    xmlns:x="microsoft winfx xaml namespace url"
+    xmlns:local="using:SampleWinPhone"
+    xmlns:d="microsoft winfx xaml blend url"
+    xmlns:mc="microsoft winfx xaml markup-compatibility url"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Margin="12, 0">
+
+        <TextBox
+            Name="textBoxEntry"
+            HorizontalAlignment="Left"
+            Height="40"
+            Width="376"
+            Margin="0 22 0 0"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            PlaceholderText="Enter text here." />
+
+        <Button
+            Name="buttonWrite"
+            Content="Write"
+            HorizontalAlignment="Left"
+            Margin="10, 94, 0, 0"
+            VerticalAlignment="Top"
+            Width="156"
+            Click="buttonWrite_Click" />
+
+        <TextBlock
+            Name="textBlockRead"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="0, 293, 0, 0"
+            Height="40"
+            Width="376"
+            FontSize="25"
+            TextWrapping="Wrap"
+            Text="" />
+
+        <Button
+            Name="buttonRead"
+            Content="Read"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="10, 374, 0, 0"
+            Width="156"
+            IsEnabled="False"
+            Click="buttonRead_Click" />
+
+    </Grid>
+
+</Page>

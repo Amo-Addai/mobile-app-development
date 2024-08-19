@@ -21,7 +21,8 @@
 
     Pointer, Border, Button, CheckBox, ComboBox, DatePicker,
     Image, ListView, MenuFlyout, Pivot, PivotItem, RadioButton,
-    TextBlock, TextBox, TimePicker, 
+    TextBlock, TextBox, TimePicker,
+    ...
 
 
     Shapes:
@@ -124,5 +125,6 @@
         </StackPanel>
 
     </StackPanel>
+
 
 </Page>

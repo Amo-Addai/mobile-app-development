@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="SampleWinPhone.Sample"
+    xmlns="microsoft winfx xaml namespace url presentation"
+    xmlns:x="microsoft winfx xaml namespace url"
+    xmlns:local="using:SampleWinPhone"
+    xmlns:d="microsoft winfx xaml blend url"
+    xmlns:mc="microsoft winfx xaml markup-compatibility url"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+
+        <Button
+            Name="buttonChat"
+            Margin="131, 132, 0, 451"
+            Click="buttonChat_Click">Chat</Button>
+
+        <Button
+            x:Name="buttonCall"
+            Margin="131, 230, 0, 353"
+            Content="Call"
+            Click="buttonCall_Click"></Button>
+
+        <Button
+            x:Name="buttonImages"
+            Margin="131, 325, 0, 258"
+            Content="Images"
+            Click="buttonImages_Click"></Button>
+
+    </Grid>
+
+</Page>

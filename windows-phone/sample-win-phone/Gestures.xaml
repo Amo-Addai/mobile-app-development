@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="SampleWinPhone.Sample"
+    xmlns="microsoft winfx xaml namespace url presentation"
+    xmlns:x="microsoft winfx xaml namespace url"
+    xmlns:local="using:SampleWinPhone"
+    xmlns:d="microsoft winfx xaml blend url"
+    xmlns:mc="microsoft winfx xaml markup-compatibility url"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Canvas> <!-- x:Name - component name-ID - .cs var name -->
+        <Rectangle
+            x:Name="MyRectangle"
+            Width="150"
+            Height="150"
+            Fill="Blue"
+            Stroke="Blue"
+            StrokeThickness="1"
+            ManipulationMode="All">
+
+
+        </Rectangle>
+
+    </Canvas>
+
+</Page>

@@ -1,5 +1,15 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 
-- xml file
+- xml file (GUI-based)
 
 - The info the system requires to deploy, display, or update app
+
+-- TODO:
+
+- Application Tab
+    - Notications - Toast capable: Yes
+
+- Visual Assets Tab
+    - Side-nav to Tile Images & Logos
+    - add image1.png & image1.png to Assets folder & choose them for Tiles Square 71x71 logos
+
