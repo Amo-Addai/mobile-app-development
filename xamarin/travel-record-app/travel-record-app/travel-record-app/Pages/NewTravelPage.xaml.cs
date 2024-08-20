@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 
 using Xamarin.Forms;
+// using Xamarin.Forms.Xaml; // todo: is namespace default-required
 
 using travel_record_app.Models;
 
 namespace travel_record_app.Pages
-{	
+{
+	// [XamlCompilation(XamlCompilationOptions.Compile)]
+	// todo: is directive/attribute deprecated (use in all .xaml.cs files if not)
 	public partial class NewTravelPage : ContentPage
 	{	
 		public NewTravelPage ()
@@ -21,13 +24,17 @@ namespace travel_record_app.Pages
 				Experience = ExperienceEntry.Text
 			};
 
-			SQLiteConnection conn = new SQLiteConnection(
-				App.DatabaseLocation
-			);
+			SQLiteConnection conn =
+				new SQLiteConnection
+				(
+					App.DatabaseLocation
+				);
 			conn.CreateTable<Post>();
 
 			int rows = conn.Insert(post);
-			if (rows > 0)
+            conn.Close(); // * faster runtime to close connection before working with return data
+
+            if (rows > 0)
 				DisplayAlert(
 					"Success",
 					"Experience successfully inserted",
@@ -40,7 +47,6 @@ namespace travel_record_app.Pages
                     "Ok"
                 );
 
-            conn.Close();
 		}
 
     }

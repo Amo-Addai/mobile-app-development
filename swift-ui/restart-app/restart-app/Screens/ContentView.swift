@@ -20,6 +20,7 @@ struct ContentView: View {
                 HomeView()
             }
         }
+        .preferredColorScheme(AppConfig.appearance) // Global ColorScheme for entire app (from Config/Constants.swift)
     }
 }
 

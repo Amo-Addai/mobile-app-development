@@ -69,8 +69,16 @@ struct HomeView: View {
             Button(
                 action: {
                     withAnimation {
+                        
+                        playSound(
+                            fileName: "success",
+                            fileType: "m4a"
+                        )
+                        
                         isOnboardingViewActive = true // updates "onboarding" app storage property
                         // updates property back to true, because this button navigates back to OnboardingView
+                        // (parent ContentView re-renders sibling OnboardingView)
+                        
                     }
                 }
             ) { // Button's content horizontally aligned by default

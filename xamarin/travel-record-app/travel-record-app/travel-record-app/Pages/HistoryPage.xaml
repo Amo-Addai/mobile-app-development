@@ -5,11 +5,19 @@
     x:Class="travel_record_app.Pages.HistoryPage">
     <ContentPage.Content>
 
-        <StackLayout>
+        <ListView x:Name="PostListView">
 
-            <Label>History Page</Label>
+            <ListView.ItemTemplate>
 
-        </StackLayout>
+                <DataTemplate>
+
+                    <TextCell Text="{Binding Experience}" />
+
+                </DataTemplate>
+
+            </ListView.ItemTemplate>
+
+        </ListView>
         
     </ContentPage.Content>
 </ContentPage>

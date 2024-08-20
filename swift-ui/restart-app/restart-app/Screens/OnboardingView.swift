@@ -14,7 +14,7 @@ struct OnboardingView: View {
     
     @AppStorage("onboarding") // getting app state property, already in storage (saved by ContentView)
     var isOnboardingViewActive: Bool = true // default-initialization is skipped since var already exists in app storage state (wouldn't be skipped if var didn't exist in storage)
-    // TODO: find out if storage property is also/only updated if it already exists, by this 'true' assignment (eg. if 'false' would change its initial 'true' value from ContentView)
+    // TODO: is storage property also/only updated if it already exists, by this 'true' assignment (eg. if 'false' would change its initial 'true' value from ContentView)
     
     @State
     private var buttonBaseWidth: Double =
@@ -32,6 +32,19 @@ struct OnboardingView: View {
     
     @State
     private var imageOffset: CGSize = CGSize(width: 0, height: 0) // == .zero enum
+    
+    @State
+    private var isArrowIndicatorAnimating: Bool = false
+    
+    @State
+    private var arrowIndicatorOpacity: Double = 1
+    
+    @State
+    private var textTitle: String = "Share"
+    
+    let hapticFeedback = UINotificationFeedbackGenerator() // to trigger Haptic-Feedback notifications
+    // Haptic-Feedback features can only be tested on a physical device (turn on 'System Haptics' in 'Settings -> Sounds & Haptics')
+
     
     
     // MARK: Body
@@ -51,10 +64,19 @@ struct OnboardingView: View {
                 
                 VStack(spacing: 0) {
                     
-                    Text("Share.")
+                    Text("\(textTitle).")
                         .font(.system(size: 60))
                         .fontWeight(.heavy)
                         .foregroundColor(.white)
+                    
+                        .transition(.opacity) // only expected to transition elem by its opacity alone when textTitle changes
+                        // using this transition-animation alone (by default) shifts TextView a bit on x-axis (right-left on disappear; left-to-right on appear) - because SwiftUI recognizes this elem as 1, with only 1 elem-identifier, despite all state changes
+                    
+                        .id(textTitle) // specifies specific identifier as the current textTitle (:String) for each instance-state of this elem, so SwiftUI recognizes all states with different textTitle (:String) values with different unique IDs
+                        // this enables expected transition-animation based on opacity alone, with no default x-axis transition-shifting
+                        
+                        // TODO: perhaps because all elem states (with different IDs) re-render with .opacity transition being static
+                        // & without id(..), & SwiftUI using only 1 identifier for the elem despite state (textTitle) changes triggering tansition.opacity, a default x-axis transition shift is caused because the elem has already been rendered once & doesn't need to be re-rendered (because it still has the same .id-entifier
                     
                     Text(
                         """
@@ -73,7 +95,7 @@ struct OnboardingView: View {
                 .offset(y: isAnimating ? 0 : -40) // -ve y-offset starts elem above top
                 .animation( // animate on render (ease-in elem while it starts from above-top to its normal position)
                     // _ animation: Animation?
-                    .easeIn( // TODO: Find out why 'easeOut' has a similar but faster effect (but doesn't actually 'disappear' the elem)
+                    .easeIn( // TODO: why 'easeOut' has a similar but faster effect (but doesn't actually 'disappear' the elem)
                         duration: 1
                     ),
                     value: isAnimating
@@ -102,8 +124,11 @@ struct OnboardingView: View {
                     
                     // but now, adding another offset-animation, specific to this view
                     .offset(
-                        x: imageOffset.width * -1.2,
+                        x: imageOffset.width * -1, // opposite-direction from Image, for parallax effect
                         y: 0
+                    )
+                    .blur(
+                        radius: abs(imageOffset.width / 35)
                     )
                     .animation(
                         .easeOut(
@@ -141,11 +166,33 @@ struct OnboardingView: View {
                                 .onChanged { gesture in
                                     if abs(imageOffset.width) <= 150 {
                                         imageOffset = gesture.translation // CGSize()
+                                        
+                                        withAnimation(
+                                            .linear(
+                                                duration: 0.25
+                                            )
+                                        ) {
+                                            textTitle = "Give"
+                                            arrowIndicatorOpacity = 0 // hide arrowIndicator Image on-end, with linear animation
+                                        }
                                     }
+                                    
+//                                    isArrowIndicatorAnimating = true // can be used to display arrowIndicator Image on-drag
+                                    
                                 }
                                 .onEnded { _ in
                                     imageOffset = .zero
                                     // can also decrement imageOffset's width & height until .zero, withAnimation
+                                    
+                                    withAnimation(
+                                        .linear(
+                                            duration: 0.25
+                                        )
+                                    ) {
+                                        textTitle = "Share"
+                                        arrowIndicatorOpacity = 1 // re-display arrowIndicator Image on-end, with linear animation
+                                    }
+                                    
                                 }
                             
                         ) // can also modify Image's animation, based on change in imageOffset
@@ -155,14 +202,52 @@ struct OnboardingView: View {
                             ),
                             value: imageOffset
                         )
+                    
                         /*
                          
-                         // TODO: both gesture & last animation modifiers exec'd before rotationEffect affect ux differently
+                         * // TODO: exactly why both gesture & last animation modifiers exec'd before rotationEffect affect ux differently
                          
+                         Drag-gesture before rotation ends gesture immediately
+                         animation before rotation distorts rotation a bit on-gesture-Ended
                          
                         */
                     
                 }
+                .overlay(
+                    Image(
+                        systemName:
+                            "arrow.left.and.right.circle"
+                    )
+                    .font(
+                        .system(
+                            size: 44,
+                            weight: .ultraLight
+                        )
+                    )
+                    .foregroundColor(.white)
+                    .offset(y: 20)
+                    
+                    .opacity( // replaces 2 opacities at the bottom (combines both isAnimating & arrowIndicatorOpacity usage)
+                        isAnimating
+                        ? arrowIndicatorOpacity // 1 by default; 0 on Drag Changed
+                        : 0
+                    ) // has to be exec'd before animation, for the easeIn effect when isAnimating == true (on containing VStack.onAppear)
+                    .animation(
+                        .easeInOut(
+                            duration: 1
+                        )
+                        .delay(1), // only when elem is being rendered for the 1st time; doesn't delay re-appearing when arrowIndicatorOpacity = back to 1 (on "character-1" Image DragGesture Ended)
+                        value: isAnimating
+//                        value: isArrowIndicatorAnimating
+                    )
+                    
+//                    .opacity(isArrowIndicatorAnimating ? 1 : 0), // TODO: can replace both opacity modifiers below (or only the 1st opacity modifier before animation) for this elem, with .animation value: also isArrowIndicatorAnimating so this elem appears on "character-1" Image DragGesture Changed (when isArrowIndicatorAnimating is toggled on)
+                    
+//                    .opacity(isAnimating ? 1 : 0)
+//                    .opacity(arrowIndicatorOpacity), // this elem disappears when arrowIndicatorOpacity is toggled off (on "character-1" Image DragGesture Changed) & reappears on DragGesture Ended
+                    
+                    , alignment: .bottom
+                )
                 
                 Spacer()
                 
@@ -339,7 +424,17 @@ struct OnboardingView: View {
                                                         
                                                         withAnimation { // no _ animation: arg given; default animation given (fade-in on render | fade-out on de-render)
                                                         
-                                                            isOnboardingViewActive = false
+                                                            hapticFeedback
+                                                                .notificationOccurred(
+                                                                    .success
+                                                                )
+                                                            
+                                                            playSound(
+                                                                fileName: "chimeup",
+                                                                fileType: "mp3"
+                                                            ) // imported from Utilities/AudioPlayer/
+                                                            
+                                                            isOnboardingViewActive = false // parent ContentView renders sibling HomeView
                                                         
                                                         }
                                                     }
@@ -347,6 +442,11 @@ struct OnboardingView: View {
                                             
                                         } else {
                                             buttonOffset = 0
+                                            
+                                            hapticFeedback
+                                                .notificationOccurred(
+                                                    .warning
+                                                )
                                         }
                                     }
                                     
@@ -381,6 +481,11 @@ struct OnboardingView: View {
                 isAnimating = true
             }
         )
+        
+//        .preferredColorScheme(AppConfig.appearance) // sets light/dark mode for this view onAppear
+        // TODO: but will also affect other screens navigating to this screen just before their navigation animations complete
+        
+        // Global ColorScheme for entire app has been set in main 'ContentView.swift' instead
         
     }
 }
