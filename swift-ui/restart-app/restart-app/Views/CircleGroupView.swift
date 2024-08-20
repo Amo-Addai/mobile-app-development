@@ -13,7 +13,7 @@ struct CircleGroupView: View {
     
     @State var ShapeColor: Color
     @State var ShapeOpacity: Double
-    @State var AnimationDuration: Int
+    @State var AnimationDuration: Double
     
     @State // private @State var with assigned value; not required during instantiation
     private var isAnimating: Bool = false
@@ -58,7 +58,7 @@ struct CircleGroupView: View {
         .scaleEffect(isAnimating ? 1 : 0.5)
         .animation(
             .easeIn(
-                duration: Double(AnimationDuration)
+                duration: AnimationDuration
             ),
             value: isAnimating
         )

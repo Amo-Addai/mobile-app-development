@@ -18,7 +18,7 @@ struct CircleGroup: View {
     var shapeOpacity: Double
     
     @State // private @State var with assigned value; not required during instantiation
-    private var isAnimating: Bool = false
+    private var lineWidth: Int = 80
     
     // MARK: Body
     
@@ -44,7 +44,7 @@ struct CircleGroup: View {
             Circle()
                 .stroke(
                     ShapeColor.opacity(shapeOpacity),
-                    lineWidth: 80
+                    lineWidth: Double(lineWidth) // mostly Double (not Int) args
                 )
                 .frame(
                     width: 260,
@@ -71,7 +71,7 @@ struct CircleGroup_Previews: PreviewProvider {
             CircleGroup(
                 ShapeColor: .white,
                 shapeOpacity: 0.2
-                // , isAnimating: true // TODO: Error when instantiating with a private @State var
+                // , lineWidth: 80 // TODO: Error when instantiating with a private @State var
             )
             
         }

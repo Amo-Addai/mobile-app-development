@@ -100,17 +100,67 @@ struct OnboardingView: View {
 //                        value: isAnimating
 //                    )
                     
+                    // but now, adding another offset-animation, specific to this view
+                    .offset(
+                        x: imageOffset.width * -1.2,
+                        y: 0
+                    )
+                    .animation(
+                        .easeOut(
+                            duration: 1
+                        ),
+                        value: imageOffset
+                    )
+                    
                     Image("character-1")
                         .resizable()
                         .scaledToFit()
                         .opacity(isAnimating ? 1 : 0)
+                        .offset(
+                            x: imageOffset.width * 1.2,
+                            y: 0
+                        )
+                        .padding(20)
                         .animation(
-                            .easeIn(
+                            .easeOut(
                                 duration: 0.7
                             ),
                             value: isAnimating
                         )
-                        .padding(20)
+                        // has to be exec'd before gesture & animation modifiers (explanation below)
+                        .rotationEffect(
+                            .degrees(
+                                Double(
+                                    imageOffset.width / 20
+                                )
+                            )
+                        )
+                        .gesture(
+                            
+                            DragGesture()
+                                .onChanged { gesture in
+                                    if abs(imageOffset.width) <= 150 {
+                                        imageOffset = gesture.translation // CGSize()
+                                    }
+                                }
+                                .onEnded { _ in
+                                    imageOffset = .zero
+                                    // can also decrement imageOffset's width & height until .zero, withAnimation
+                                }
+                            
+                        ) // can also modify Image's animation, based on change in imageOffset
+                        .animation(
+                            .easeOut(
+                                duration: 1
+                            ),
+                            value: imageOffset
+                        )
+                        /*
+                         
+                         // TODO: both gesture & last animation modifiers exec'd before rotationEffect affect ux differently
+                         
+                         
+                        */
                     
                 }
                 
