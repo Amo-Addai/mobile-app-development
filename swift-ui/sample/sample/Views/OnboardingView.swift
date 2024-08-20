@@ -38,7 +38,7 @@ struct OnboardingView: View {
                 Text("Start")
             }
             
-        }
+        } // VStack // MARK: Comment end-of-scope (or use blank-lines) - for Readability
     }
 }
 
