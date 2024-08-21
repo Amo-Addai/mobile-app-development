@@ -47,5 +47,17 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+
+	<!-- custom inputs -->
+
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Photo Required</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Photo Required</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Photo Required</string>
+
+	<!-- end of custom inputs -->
+
 </dict>
 </plist>

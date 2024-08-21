@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:splashscreen/splashscreen.dart';
 
-import 'package:cats_vs_dogs/home.dart';
+import 'home.dart';
+
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen(
@@ -22,18 +23,20 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return const SplashScreen(
+    return SplashScreen(
       seconds: 2,
       navigateAfterSeconds: Home(),
-      title: Text('Cat and Dog Classifier',
+      title: const Text('Cat and Dog Classifier',
           style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 25,
-              color: Color(0x00FFFF))),
+              color: Colors.yellowAccent
+          )
+      ),
       image: Image.asset('assets/cat_dog_icon.png'),
       backgroundColor: Colors.blueAccent,
       photoSize: 60,
-      loaderColor: Color(0x004242),
+      loaderColor: Colors.redAccent,
     );
   }
 }
