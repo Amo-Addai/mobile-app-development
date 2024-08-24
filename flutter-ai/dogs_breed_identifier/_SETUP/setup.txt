@@ -1,0 +1,28 @@
+
+- flutter, sdk, paths,
+- android-studio - dart & flutter dependencies
+- setup flutter project
+
+- kaggle.com - download 'Dog Breeds' data-set (data & images sets)
+NB: 'images/' has too many dog breeds; best to work with <10 breeds for faster model-training
+eg. Husky, Corgi, Retriever, Shiba, Chihuahua, Pomeranian, Pomski, ..
+
+- teachablemachine.withgoogle.com
+    - Image Project (also has Audio, Pose, Gait, etc)
+    - set/create classes (<10) for each breed chosen from 'images/' data-set & upload their respective training data sets
+    - Train Model
+        - set default hyper-params
+            - epochs (50), batch-size (16), learning-rate (0.001)
+        - Train Model (wait whenever web page slows down)
+        
+    - After Model trained, in Preview section
+        - Test with File (or Webcam - with a real dog-breed)
+        - upload test data - image(s) from each chosen dog-breed data-set
+        - Results - <100% Classified Dog-Breed
+    - Export Model
+        - Tensorflow Lite (or Tensorflow / Tensorflow.js)
+        - Model conversion type: Floating point
+        - Download your model
+    - Export downloaded 'converted_tflite.zip'
+    - Copy 'model_unquant.tflite' & 'labels.txt' into 'assets/ai/' directory in 'dogs_breed_identifier' flutter project
+        - in labels.txt, remove '0 ', '1 ', .. numbering from all dog-breed labels

@@ -5,15 +5,7 @@ import 'home.dart';
 
 
 class SplashScreen extends StatefulWidget {
-  const SplashScreen(
-      {super.key,
-      required int seconds,
-      required Home navigateAfterSeconds,
-      required Text title,
-      required Image image,
-      required MaterialAccentColor backgroundColor,
-      required int photoSize,
-      required Color loaderColor});
+  const SplashScreen({super.key});
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();

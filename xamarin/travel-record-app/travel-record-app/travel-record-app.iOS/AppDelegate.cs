@@ -25,6 +25,9 @@ namespace travel_record_app.iOS
         {
             global::Xamarin.Forms.Forms.Init();
 
+            // todo: install Xamarin.Forms.Maps NuGet package
+            // Xamarin.FormsMaps.Init(); // Maps Package
+
             // todo: can be used in App(string) override
             string dbPath = Path.Combine(
                 Path.Combine(

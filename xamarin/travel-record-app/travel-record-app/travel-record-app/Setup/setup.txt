@@ -2,4 +2,11 @@
 
 - Manage NuGet Packages
     - sqlite-net-pcl - install latest stable version to project (+ .android & .ios)
+    - Xamarin.Forms.Maps
+    - Xam.Plugin.Geolocator
+
+
+- Setup & Enable Google Cloud API for Google Maps Android API
+    - Add credentials to project & get API key
+    - Add API key AndroidManifest.xml meta-data
 

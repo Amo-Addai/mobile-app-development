@@ -9,7 +9,7 @@ using travel_record_app.Models;
 namespace travel_record_app.Pages
 {
 	// [XamlCompilation(XamlCompilationOptions.Compile)]
-	// todo: is directive/attribute deprecated (use in all .xaml.cs files if not)
+	// * already imported in AssemblyInfo.cs
 	public partial class NewTravelPage : ContentPage
 	{	
 		public NewTravelPage ()

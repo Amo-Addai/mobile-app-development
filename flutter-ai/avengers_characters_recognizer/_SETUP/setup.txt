@@ -1,0 +1,28 @@
+
+- flutter, sdk, paths,
+- android-studio - dart & flutter dependencies
+- setup flutter project
+
+- kaggle.com - download 'Marvel Heroes' data-set (train & valid sets)
+NB: 'marvel/[train/valid]/' has 8 avenger-types; best to work with all types for model-training
+eg. Black Widow, Captain America, Doctor Strange, Hulk, Iron Man, Loki, Spider Man, Thanos, ..
+
+- teachablemachine.withgoogle.com
+    - Image Project (also has Audio, Pose, Gait, etc)
+    - set/create classes (all 8) for each type chosen from 'marvel/train/' data-set & upload their respective training data sets
+    - Train Model
+        - set default hyper-params
+            - epochs (50), batch-size (16), learning-rate (0.001)
+        - Train Model (wait whenever web page slows down)
+
+    - After Model trained, in Preview section
+        - Test with File (or Webcam - with a real avenger-type)
+        - upload test data - image(s) from each chosen avenger-type data-set
+        - Results - <100% Classified Avenger-Type
+    - Export Model
+        - Tensorflow Lite (or Tensorflow / Tensorflow.js)
+        - Model conversion type: Floating point
+        - Download your model
+    - Export downloaded 'converted_tflite.zip'
+    - Copy 'model_unquant.tflite' & 'labels.txt' into 'assets/ai/' directory in 'avengers_characters_recognizer' flutter project
+        - in labels.txt, remove '0 ', '1 ', .. numbering from all avenger-type labels

@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       title: 'Face-Mask Detector',
       home: SplashScreen(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

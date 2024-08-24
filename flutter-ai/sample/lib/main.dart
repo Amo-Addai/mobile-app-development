@@ -1,349 +1,135 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
+import 'package:camera/camera.dart';
 
-import 'request.dart';
 
-void main() {
+List<CameraDescription> cameras;
+
+
+Future<void> main() async {
+
+  // * initialize cameras
+  WidgetsFlutterBinding
+      .ensureInitialized();
+  cameras = await availableCameras();
+
   runApp(const MyApp());
 }
 
-const String apiUrl = 'https://localhost:7028/'; // backend-api
-
 class MyApp extends StatelessWidget {
-  
   const MyApp({super.key});
 
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter ChatGPT App',
+      title: 'Flutter Demo',
       theme: ThemeData(
+        // This is the theme of your application.
+        //
+        // Try running your application with "flutter run". You'll see the
+        // application has a blue toolbar. Then, without quitting the app, try
+        // changing the primarySwatch below to Colors.green and then invoke
+        // "hot reload" (press "r" in the console where you ran "flutter run",
+        // or simply save your changes to "hot reload" in a Flutter IDE).
+        // Notice that the counter didn't reset back to zero; the application
+        // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const LoginPage(),
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
 
-class LoginPage extends StatefulWidget {
-  
-  const LoginPage({super.key});
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
+
+  // This widget is the home page of your application. It is stateful, meaning
+  // that it has a State object (defined below) that contains fields that affect
+  // how it looks.
+
+  // This class is the configuration for the state. It holds the values (in this
+  // case the title) provided by the parent (in this case the App widget) and
+  // used by the build method of the State. Fields in a Widget subclass are
+  // always marked "final".
+
+  final String title;
 
   @override
-  _LoginPageState createState() => _LoginPageState();
+  State<MyHomePage> createState() => _MyHomePageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
-  
-  final TextEditingController _usernameController = TextEditingController();
-  final TextEditingController _passwordController = TextEditingController();
+class _MyHomePageState extends State<MyHomePage> {
 
-  Future<void> _login() async {
-    final String username = _usernameController.text;
-    final String password = _passwordController.text;
+  int _counter = 0; // * state-prop (_namingConvention) - used in Widget-build-context 
+  int? i; // * prop (anyNamingConvention) - should only be used in class methods (not in Widget-build-context)
 
-    final response = await loginUser(username, password) ;
-
-    if (response != null) {
-      // User authenticated successfully
-      Navigator.push( // pushReplacement( this replaces the current screen with the new one, and doesn't keep it in the stack
-        context,
-        MaterialPageRoute(builder: (context) => HomePage()),
-      );
-    } else {
-      // Authentication failed
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Authentication failed'),
-        ),
-      );
-    }
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Login'),
-      ),
-      body: LayoutBuilder(
-        builder: (BuildContext context, BoxConstraints constraints) {
-          // Check the screen width to determine the layout
-          if (constraints.maxWidth < 600) {
-            // Mobile layout
-            return _buildMobileLayout();
-          } else {
-            // Desktop layout
-            return _buildDesktopLayout();
-          }
-        },
-      ),
-    );
-  }
-
-  Widget _buildMobileLayout() {
-    return Padding(
-      padding: const EdgeInsets.all(20.0),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          TextField(
-            controller: _usernameController,
-            decoration: const InputDecoration(
-              labelText: 'Username',
-            ),
-          ),
-          const SizedBox(height: 20),
-          TextField(
-            controller: _passwordController,
-            obscureText: true,
-            decoration: const InputDecoration(
-              labelText: 'Password',
-            ),
-          ),
-          const SizedBox(height: 20),
-          ElevatedButton(
-            onPressed: _login,
-            child: const Text('Login'),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildDesktopLayout() {
-    return Center(
-      child: SizedBox(
-        width: 400,
-        child: Card(
-          elevation: 8,
-          child: Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                TextField(
-                  controller: _usernameController,
-                  decoration: const InputDecoration(
-                    labelText: 'Username',
-                  ),
-                ),
-                const SizedBox(height: 20),
-                TextField(
-                  controller: _passwordController,
-                  obscureText: true,
-                  decoration: const InputDecoration(
-                    labelText: 'Password',
-                  ),
-                ),
-                const SizedBox(height: 20),
-                ElevatedButton(
-                  onPressed: _login,
-                  child: const Text('Login'),
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-
-}
-
-class HomePage extends StatefulWidget {
-  
-  const HomePage({super.key});
-
-  @override
-  _HomePageState createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  
-  final TextEditingController _queryController = TextEditingController();
-
-  bool _isSendingQuery = false;
-  bool _isGettingQueries = false;
-
-  Future<void> _sendQuery(BuildContext context, String query) async {
-    setState(() {
-      _isSendingQuery = true;
-    });
-
-    if (query.length > 0) {
-      _queryController.clear();
-
-      final response = await postQuery(query);
-
-      if (response != null) {
-        // Display response to user
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-
-            // content: Text(response['data']),
-            
-            content: SingleChildScrollView(
-              scrollDirection: Axis.vertical,
-              child: Text(response['data']),
-            ),
-
-            // content: SingleChildScrollView(
-            //   scrollDirection: Axis.vertical, // Scroll vertically
-            //   child: Container(
-            //     padding: const EdgeInsets.all(8.0), // Add padding for better readability
-            //     child: Text(
-            //       response['data'],
-            //       textAlign: TextAlign.left,
-            //     ),
-            //   ),
-            // ), 
-
-            duration: response['data'] == 'ChatGPT Error.' 
-              ? const Duration(seconds: 3) 
-              : const Duration(seconds: 10),
-              
-          ),
-        );
-      } else {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('Error occurred'),
-          ),
-        );
-      }
-    } else {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Input a Query'),
-        ),
-      );
-    }
-
-    setState(() {
-      _isSendingQuery = false;
+  void _incrementCounter() { // * event-handler (_namingConvention) - used in Widget-build-context 
+    setState(() { // * triggers Widget re-build, with new state-changes in context
+      // This call to setState tells the Flutter framework that something has
+      // changed in this State, which causes it to rerun the build method below
+      // so that the display can reflect the updated values. If we changed
+      // _counter without calling setState(), then the build method would not be
+      // called again, and so nothing would appear to happen.
+      _counter++;
     });
   }
 
-  Future<void> _getQueries(BuildContext context) async {
-
+  void _decrementCounter() { // todo: use in Build-context
+    _counter--; // * even if _stateVar is updated outside of setState()
     setState(() {
-      _isGettingQueries = true;
+      _counter; // _stateVar still needs to be 'stated' only, in setState() to trigger Widget re-build, with new state-changes in context
     });
-
-    final response = await getUserQueries();
-
-    if (response != null && response['data']?.length > 0) {
-
-      // Create snack bars for each item in the response
-      List<SnackBar> snackBars = [];
-      
-      response['data'].forEach((query) {
-        snackBars.add(
-          SnackBar(
-            content: Text('${query['queryText']} : ${query['responseText']}'),
-            duration: const Duration(seconds: 10),
-          ),
-        );
-      });
-
-      // Show all snack bars simultaneously
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-
-          content: SingleChildScrollView(
-            scrollDirection: Axis.vertical,
-            child: Column(
-              mainAxisSize: MainAxisSize.max,
-              children: snackBars.map((snackBar) => snackBar.content!).toList(),
-            ),
-          ),
-
-          // content: Column(
-          //   mainAxisSize: MainAxisSize.max,
-          //   children: snackBars.map((snackBar) => snackBar.content!).toList(),
-          // ),
-
-          duration: const Duration(seconds: 10),
-        
-        ),
-      );
-
-    } else {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Error occurred'),
-        ),
-      );
-    }
-
-    setState(() {
-      _isGettingQueries = false;
-    });
-
-  }
-
-  Future<void> _logout() async {
-    final response = await logout();
-    // work with response, if required
   }
 
   @override
   Widget build(BuildContext context) {
+    // This method is rerun every time setState is called, for instance as done
+    // by the _incrementCounter method above.
+    //
+    // The Flutter framework has been optimized to make rerunning build methods
+    // fast, so that you can just rebuild anything that needs updating rather
+    // than having to individually change instances of widgets.
     return Scaffold(
       appBar: AppBar(
-        title: const Text('ChatGPT App'),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.logout),
-            onPressed: () {
-              _logout();
-              Navigator.pop(context);
-            },
-          ),
-        ],
+        // Here we take the value from the MyHomePage object that was created by
+        // the App.build method, and use it to set our appbar title.
+        title: Text(widget.title),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(20.0),
+      body: Center(
+        // Center is a layout widget. It takes a single child and positions it
+        // in the middle of the parent.
         child: Column(
+          // Column is also a layout widget. It takes a list of children and
+          // arranges them vertically. By default, it sizes itself to fit its
+          // children horizontally, and tries to be as tall as its parent.
+          //
+          // Invoke "debug painting" (press "p" in the console, choose the
+          // "Toggle Debug Paint" action from the Flutter Inspector in Android
+          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
+          // to see the wireframe for each widget.
+          //
+          // Column has various properties to control how it sizes itself and
+          // how it positions its children. Here we use mainAxisAlignment to
+          // center the children vertically; the main axis here is the vertical
+          // axis because Columns are vertical (the cross axis would be
+          // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            TextField(
-              controller: _queryController,
-              decoration: const InputDecoration(
-                labelText: 'Enter your query',
-              ),
+          children: <Widget>[
+            const Text(
+              'You have pushed the button this many times:',
             ),
-            const SizedBox(height: 20),
-            _isSendingQuery
-                ? const SizedBox(
-                    height: 24,
-                    width: 24,
-                    child: CircularProgressIndicator(
-                      strokeWidth: 3
-                    )
-                  )
-                : ElevatedButton(
-                    onPressed: () => _sendQuery(context, _queryController.text),
-                    child: const Text('Send Query'),
-                  ),
-            const SizedBox(height: 20),
-            _isGettingQueries
-                ? const SizedBox(
-                    height: 24,
-                    width: 24,
-                    child: CircularProgressIndicator(
-                      strokeWidth: 3
-                    )
-                  )
-                : ElevatedButton(
-                    onPressed: () => _getQueries(context),
-                    child: const Text('Show Past Queries'),
-                  )
+            Text(
+              '$_counter', // * using state-prop in build-context
+              style: Theme.of(context).textTheme.headline4,
+            ),
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'Increment',
+        child: const Icon(Icons.add),
+      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }

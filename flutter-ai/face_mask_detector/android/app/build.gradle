@@ -60,6 +60,15 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+
+    // TODO: best stage to add custom/external config
+
+    // Tensorflow-Lite
+    aaptOptions {
+        noCompress 'tflite'
+        noCompress 'lite'
+    }
+    
 }
 
 flutter {

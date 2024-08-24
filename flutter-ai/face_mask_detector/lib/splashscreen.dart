@@ -16,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return SplashScreen(
       seconds: 15,
-      navigateAfterSeconds: Home(),
+      navigateAfterSeconds: const Home(),
       title: const Text(
         'Face Mask Detector',
         style: TextStyle(

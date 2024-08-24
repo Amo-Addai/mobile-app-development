@@ -1,0 +1,28 @@
+
+- flutter, sdk, paths,
+- android-studio - dart & flutter dependencies
+- setup flutter project
+
+- kaggle.com - download 'Fruits .. ' data-set (train & valid sets)
+NB: 'fruits .. /[train/valid]/' has 10 fruit-types; best to work with all types for model-training
+eg. apples, avocados, bananas, grapes, guava, limes, mangos, oranges, pineapples, watermelons, ..
+
+- teachablemachine.withgoogle.com
+    - Image Project (also has Audio, Pose, Gait, etc)
+    - set/create classes (all 10) for each type chosen from 'fruits .. /train/' data-set & upload their respective training data sets
+    - Train Model
+        - set default hyper-params
+            - epochs (50), batch-size (16), learning-rate (0.001)
+        - Train Model (wait whenever web page slows down)
+
+    - After Model trained, in Preview section
+        - Test with File (or Webcam - with a real fruit-type)
+        - upload test data - image(s) from each chosen fruit-type data-set
+        - Results - <100% Classified Fruit-Type
+    - Export Model
+        - Tensorflow Lite (or Tensorflow / Tensorflow.js)
+        - Model conversion type: Floating point
+        - Download your model
+    - Export downloaded 'converted_tflite.zip'
+    - Copy 'model_unquant.tflite' & 'labels.txt' into 'assets/ai/' directory in 'fruits_recogniser' flutter project
+        - in labels.txt, remove '0 ', '1 ', .. numbering from all fruit-type labels

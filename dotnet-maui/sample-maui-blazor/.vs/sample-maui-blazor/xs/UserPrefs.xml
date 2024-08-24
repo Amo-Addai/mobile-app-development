@@ -1,0 +1,41 @@
+﻿<Properties StartupConfiguration="{84A99141-BE6E-444E-9020-F3EE20D46A1C}|Default">
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MyAppleMacCatalystID" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="sample-maui-blazor/Pages/Index.razor">
+    <Files>
+      <File FileName="sample-maui-blazor/Pages/Index.razor" Line="9" Column="1" />
+      <File FileName="sample-maui-blazor/Main.razor" />
+      <File FileName="sample-maui-blazor/MauiProgram.cs" />
+      <File FileName="sample-maui-blazor/App.xaml" />
+      <File FileName="sample-maui-blazor/App.xaml.cs" />
+      <File FileName="sample-maui-blazor/MainPage.xaml" />
+      <File FileName="sample-maui-blazor/MainPage.xaml.cs" />
+      <File FileName="sample-maui-blazor/Pages/Counter.razor" />
+      <File FileName="sample-maui-blazor/Pages/FetchData.razor" />
+      <File FileName="sample-maui-blazor/Data/WeatherForecast.cs" />
+      <File FileName="sample-maui-blazor/Data/WeatherForecastService.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="sample-maui-blazor" expanded="True">
+            <Node name="sample-maui-blazor" expanded="True">
+              <Node name="Data" expanded="True" />
+              <Node name="Pages" expanded="True">
+                <Node name="Index.razor" selected="True" />
+              </Node>
+              <Node name="App.xaml" expanded="True" />
+              <Node name="MainPage.xaml" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.sample-maui-blazor FirstBuild="True" PreferredExecutionTarget="MyAppleMacCatalystID" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

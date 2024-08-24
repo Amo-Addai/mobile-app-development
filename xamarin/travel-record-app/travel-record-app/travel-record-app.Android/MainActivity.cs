@@ -18,6 +18,9 @@ namespace travel_record_app.Droid
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
 
+            // todo: install Xamarin.Forms.Maps NuGet package
+            // Xamarin.FormMaps.Init(this, savedInstanceState); // Maps Package
+
             // todo: can be used in App(string) override
             string dbPath = Path.Combine(
                 System.Environment.GetFolderPath(

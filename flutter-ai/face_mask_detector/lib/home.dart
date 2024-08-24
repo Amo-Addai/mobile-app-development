@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tflite/tflite.dart';
 
 import 'main.dart';
 
@@ -17,6 +18,13 @@ class _HomeState extends State<Home> {
   bool isWorking = false;
   String result = "";
 
+  loadModel() async {
+    await Tflite.loadModel(
+      model: "assets/ai/model_unquant.tflite",
+      labels: 'assets/ai/labels.txt'
+    );
+  }
+
   initCamera() {
     cameraController = CameraController(
       cameras[0],
@@ -33,11 +41,45 @@ class _HomeState extends State<Home> {
               if (!isWorking) {
                 isWorking = true,
                 imageCamera = imageFromStream,
+                runModelOnFrame(),
               }
             });
-        })
+        });
       });
 
+  }
+
+  runModelOnFrame() async {
+    if (imageCamera != null) {
+      var recognitions =
+          await Tflite
+            .runModelOnFrame(
+              bytesList:
+                imageCamera
+                  .planes
+                  .map((plane) {
+                    return plane.bytes;
+                  })
+                  .toList(),
+              imageHeight: imageCamera.height,
+              imageWidth: imageCamera.width,
+              imageMean: 127.5,
+              imageStd: 127.5,
+              rotation: 90,
+              numResults: 1,
+              threshold: 0.1,
+              asynch: true,
+          );
+      result = "";
+      recognitions
+        .forEach((response) {
+          result +=
+              response["label"]
+              + "\n";
+        });
+      setState(() => result);
+      isWorking = false;
+    }
   }
 
   @override
@@ -59,22 +101,25 @@ class _HomeState extends State<Home> {
           appBar: AppBar(
             backgroundColor: Colors.black,
             title: Padding(
-              padding: EdgeInsets.only(
+              padding: const EdgeInsets.only(
                 top: 40
               ),
               child: Center(
                 child: Text(
-                  "",
-                  style: TextStyle(
-
-                  )
+                  result,
+                  style: const TextStyle(
+                    backgroundColor: Colors.black54,
+                    color: Colors.white,
+                    fontSize: 30,
+                  ),
+                  textAlign: TextAlign.center,
                 )
               )
             )
           ),
           body: Column(
             children: [
-              Position(
+              Positioned(
                 top: 0,
                 left: 0,
                 width: bodySize.width,
@@ -86,7 +131,7 @@ class _HomeState extends State<Home> {
                         .value
                         .initialized
                     ? Container(
-
+                      // TODO: 
                     )
                     : AspectRatio(
                       aspectRatio:
@@ -94,7 +139,7 @@ class _HomeState extends State<Home> {
                       .value
                       .aspectRatio,
                       child: CameraPreview(
-                          cameraController
+                        cameraController
                       )
                     ),
                   )
@@ -104,7 +149,6 @@ class _HomeState extends State<Home> {
           )
         )
       )
-
     );
   }
 }
