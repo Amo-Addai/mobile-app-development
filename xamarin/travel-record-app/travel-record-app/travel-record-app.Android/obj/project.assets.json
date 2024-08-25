@@ -59,15 +59,20 @@
   },
   "logs": [
     {
-      "code": "NU1301",
+      "code": "Undefined",
       "level": "Error",
-      "message": "Unable to load the service index for source https://api.nuget.org/v3/index.json.",
-      "libraryId": "Xamarin.Essentials"
+      "message": "Failed to download package 'Xamarin.AndroidX.Browser.1.3.0.5' from 'https://api.nuget.org/v3-flatcontainer/xamarin.androidx.browser/1.3.0.5/xamarin.androidx.browser.1.3.0.5.nupkg'.\nThe request timed out.\n  Error Domain=NSURLErrorDomain Code=-1001 \"The request timed out.\" UserInfo={_kCFStreamErrorCodeKey=-2102, NSUnderlyingError=0x6000015ebba0 {Error Domain=kCFErrorDomainCFNetwork Code=-1001 \"(null)\" UserInfo={_kCFStreamErrorCodeKey=-2102, _kCFStreamErrorDomainKey=4}}, _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <56C8F901-A929-466B-87B4-0FF308498F1F>.<22>, _NSURLErrorRelatedURLSessionTaskErrorKey=(\n      \"LocalDataTask <56C8F901-A929-466B-87B4-0FF308498F1F>.<22>\"\n  ), NSLocalizedDescription=The request timed out., NSErrorFailingURLStringKey=https://api.nuget.org/v3-flatcontainer/xamarin.androidx.browser/1.3.0.5/xamarin.androidx.browser.1.3.0.5.nupkg, NSErrorFailingURLKey=https://api.nuget.org/v3-flatcontainer/xamarin.androidx.browser/1.3.0.5/xamarin.androidx.browser.1.3.0.5.nupkg, _kCFStreamErrorDomainKey=4}"
     },
     {
       "code": "NU1301",
       "level": "Error",
-      "message": "Unable to load the service index for source https://api.nuget.org/v3/index.json.",
+      "message": "Failed to retrieve information about 'Xamarin.AndroidX.Browser' from remote source 'https://api.nuget.org/v3-flatcontainer/xamarin.androidx.browser/index.json'.",
+      "libraryId": "Xamarin.AndroidX.Browser"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Xamarin.Forms' from remote source 'https://api.nuget.org/v3-flatcontainer/xamarin.forms/index.json'.",
       "libraryId": "Xamarin.Forms"
     }
   ]

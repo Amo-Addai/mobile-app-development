@@ -19,7 +19,16 @@ namespace travel_record_app.Pages
 
 			var locator = CrossGeolocator.Current;
 
+			// relocate map to user-center when user-location changes
 			locator.PositionChanged += Locator_PositionChanged;
+
+			// listen for location changes (draws more battery-power)
+			await locator.StartListeningAsync
+			(
+				0, // minTime
+				100.0, // minDistance
+				true, // includeHeading
+            );
 
             var position = await locator.GetPositionAsync();
 
@@ -39,21 +48,20 @@ namespace travel_record_app.Pages
 
 		private void MoveToPosition(Maps.Position position)
 		{
-            var center = new Maps.Position
-            (
-                position.Latitute,
-                position.Longitude
-            ),
-            LocationsMap.MoveToRegion
-            (
-                new Maps.MapSpan
-                (
-                    center,
-                    2,
-                    2
-                )
+			var center = new Maps.Position
+			(
+				position.Latitute,
+				position.Longitude
+			);
 
-            );
+			var span = new Maps.MapSpan
+			(
+				center,
+				2,
+				2
+			);
+
+            LocationsMap.MoveToRegion(span);
         }
 
 

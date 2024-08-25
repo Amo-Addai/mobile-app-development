@@ -11,5 +11,5 @@
 	<uses-permission android:name="android.permission.INTERNET" />
 	<application android:label="travel-record-app.Android">
 		<meta-data android:name="com.google.android.geo.API_KEY" android:value="GOOGLE_API_KEY_FOR_GOOGLE_MAPS" />
-    </application>
+	</application>
 </manifest>
