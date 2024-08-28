@@ -19,13 +19,11 @@ class MainActivity : AppCompatActivity() {
             var enteredText = edit.text
 
             Toast.makeText(
-                    this,
-                    "Hello, "
-                    + enteredText,
-                    Toast.LENGTH_LONG
-                )
-                .show()
-            )
+                this,
+                "Hello, "
+                + enteredText,
+                Toast.LENGTH_LONG
+            ).show()
         }
 
     }

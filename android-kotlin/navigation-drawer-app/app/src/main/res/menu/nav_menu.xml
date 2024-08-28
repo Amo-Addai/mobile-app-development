@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Create as menu-resource-file -->
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:title="Home" />
+        <item
+            android:id="@+id/message"
+            android:title="Messages" />
+        <item
+            android:id="@+id/settings"
+            android:title="Settings" />
+    </group>
+
+    <item android:title="Profile">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/login"
+                    android:title="Login Page" />
+            </group>
+        </menu>
+    </item>
+
+</menu>

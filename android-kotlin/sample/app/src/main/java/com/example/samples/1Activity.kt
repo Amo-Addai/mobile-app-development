@@ -9,7 +9,7 @@ class `1Activity` : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_1)
+        setContentView(R.layout.samples.activity_1)
 
         this.edit = EditText()
 

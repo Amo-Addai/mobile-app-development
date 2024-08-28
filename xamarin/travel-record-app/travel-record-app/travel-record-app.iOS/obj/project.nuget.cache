@@ -1,19 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "uGwG27rHr8sS9FqoWf5MJauNRwjExh+9e/Pc21WjGW8c6wezMswLMDZCFdP1B1Z79am9TyONPkSgmlmQlx2EoA==",
+  "dgSpecHash": "gzufvQ9D2f20thbWUV9WzoWkLCLYkXeZc9cPT55rglW+Pt5BEuG4+Y+kExdtwIKHuXWpuYQLc54Xff9LOUmE2w==",
   "success": false,
   "projectFilePath": "/Users/kwadwo/Desktop/AUTOMAN/autocode/github/auto_portfolios/auto-portfolio - samples/mobile-app-development/xamarin/travel-record-app/travel-record-app/travel-record-app.iOS/travel-record-app.iOS.csproj",
   "expectedPackageFiles": [],
   "logs": [
     {
-      "code": "Undefined",
+      "code": "NU1301",
       "level": "Error",
-      "message": "Failed to download package 'Xamarin.Forms.5.0.0.2196' from 'https://api.nuget.org/v3-flatcontainer/xamarin.forms/5.0.0.2196/xamarin.forms.5.0.0.2196.nupkg'.\nThe request timed out.\n  Error Domain=NSURLErrorDomain Code=-1001 \"The request timed out.\" UserInfo={_kCFStreamErrorCodeKey=-2102, NSUnderlyingError=0x6000017587b0 {Error Domain=kCFErrorDomainCFNetwork Code=-1001 \"(null)\" UserInfo={_kCFStreamErrorCodeKey=-2102, _kCFStreamErrorDomainKey=4}}, _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <2E3D335F-D891-43DB-9120-4B2322B60D7D>.<27>, _NSURLErrorRelatedURLSessionTaskErrorKey=(\n      \"LocalDataTask <2E3D335F-D891-43DB-9120-4B2322B60D7D>.<27>\"\n  ), NSLocalizedDescription=The request timed out., NSErrorFailingURLStringKey=https://api.nuget.org/v3-flatcontainer/xamarin.forms/5.0.0.2196/xamarin.forms.5.0.0.2196.nupkg, NSErrorFailingURLKey=https://api.nuget.org/v3-flatcontainer/xamarin.forms/5.0.0.2196/xamarin.forms.5.0.0.2196.nupkg, _kCFStreamErrorDomainKey=4}"
+      "message": "Unable to load the service index for source https://api.nuget.org/v3/index.json.",
+      "libraryId": "Xamarin.Essentials"
     },
     {
       "code": "NU1301",
       "level": "Error",
-      "message": "Failed to retrieve information about 'Xamarin.Forms' from remote source 'https://api.nuget.org/v3-flatcontainer/xamarin.forms/index.json'.",
+      "message": "Unable to load the service index for source https://api.nuget.org/v3/index.json.",
       "libraryId": "Xamarin.Forms"
     }
   ]
