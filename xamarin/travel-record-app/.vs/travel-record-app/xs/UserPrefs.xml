@@ -1,10 +1,12 @@
 ﻿<Properties StartupConfiguration="{08C267A3-52ED-49BD-A440-D963F73AEFB5}|Default">
-  <MonoDevelop.Ide.ItemProperties.travel-record-app FirstBuild="True" />
   <MonoDevelop.Ide.ItemProperties.travel-record-app.iOS FirstBuild="True" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.Pixel_3a_API_32_arm64-v8a" />
+  <MonoDevelop.Ide.ItemProperties.travel-record-app.Android PreferredExecutionTarget="Android.Pixel_3a_API_32_arm64-v8a" FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workbench ActiveDocument="travel-record-app/travel-record-app/Pages/MapPage.xaml.cs">
     <Files>
       <File FileName="travel-record-app/travel-record-app/AssemblyInfo.cs" />
@@ -29,9 +31,7 @@
           <Node name="travel-record-app" expanded="True">
             <Node name="travel-record-app" expanded="True">
               <Node name="Models" expanded="True" />
-              <Node name="Pages" expanded="True">
-                <Node name="MapPage.xaml.cs" selected="True" />
-              </Node>
+              <Node name="Pages" expanded="True" />
               <Node name="Setup" expanded="True" />
             </Node>
             <Node name="travel-record-app.Android" expanded="True" />
@@ -41,8 +41,6 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.travel-record-app.Android FirstBuild="True" PreferredExecutionTarget="Android.Pixel_3a_API_32_arm64-v8a" />
+  <MonoDevelop.Ide.ItemProperties.travel-record-app FirstBuild="True" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.Pixel_3a_API_32_arm64-v8a" />
 </Properties>

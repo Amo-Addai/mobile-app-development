@@ -1,27 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "L/rIKHu82iJEfvguesmF4h9Di13BM/vKOUGv5eJg1DV5DMS0RtBxu/TyBxGVRbDIgmyP3mKqoe6977/0qkmzHg==",
-  "success": false,
+  "dgSpecHash": "GAyE2J1+Lej2TfQy2S/rqsjnDyN1B6JrJPY6APtJjZQ2/C59ufgnEtKV0qmaon3nncqkQNo9HRZE7LshnC+/fA==",
+  "success": true,
   "projectFilePath": "/Users/kwadwo/Desktop/AUTOMAN/autocode/github/auto_portfolios/auto-portfolio - samples/mobile-app-development/xamarin/travel-record-app/travel-record-app/travel-record-app/travel-record-app.csproj",
-  "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "Unable to load the service index for source https://api.nuget.org/v3/index.json.",
-      "libraryId": "Xamarin.Essentials"
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "Unable to load the service index for source https://api.nuget.org/v3/index.json.",
-      "libraryId": "NETStandard.Library"
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "Unable to load the service index for source https://api.nuget.org/v3/index.json.",
-      "libraryId": "Xamarin.Forms"
-    }
-  ]
+  "expectedPackageFiles": [
+    "/Users/kwadwo/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/Users/kwadwo/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512",
+    "/Users/kwadwo/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
+    "/Users/kwadwo/.nuget/packages/xamarin.essentials/1.7.0/xamarin.essentials.1.7.0.nupkg.sha512",
+    "/Users/kwadwo/.nuget/packages/xamarin.forms/5.0.0.2196/xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
 }
