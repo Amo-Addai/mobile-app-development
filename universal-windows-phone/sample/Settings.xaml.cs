@@ -52,7 +52,7 @@ namespace Application
                 settingList.Add(string.Format("{0}: {1}", key, localSettings.Values[key]));
             }
 
-            listSettings.ItemSource = settingList;
+            listSettings.ItemsSource = settingList;
         }
 
     }

@@ -17,9 +17,21 @@
   <ItemGroup>
     <None Remove="Pages\" />
     <None Remove="Models\" />
+    <None Remove="Helpers\" />
+    <None Remove="Logic\" />
+    <None Remove="Assets\" />
+    <None Remove="Assets\Images\" />
+    <None Remove="Assets\Images\travel-bag.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Pages\" />
     <Folder Include="Models\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Logic\" />
+    <Folder Include="Assets\" />
+    <Folder Include="Assets\Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Images\travel-bag.png" />
   </ItemGroup>
 </Project>

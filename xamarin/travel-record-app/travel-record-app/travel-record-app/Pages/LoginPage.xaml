@@ -17,8 +17,14 @@
 
     <ContentPage.Content>
 
-        <StackLayout VerticalOption="Center"
+        <StackLayout VerticalOptions="Center"
                      Margin="40, 0, 40, 0">
+
+            <Image x:Name="IconImage"
+                   Aspect="AspectFit"
+                   HorizontalOptions="FillAndExpand"
+                   HeightRequest="150"
+                   Margin="0, 0, 0, 50" />
 
             <Entry x:Name="EmailEntry"
                    Placeholder="Email address"

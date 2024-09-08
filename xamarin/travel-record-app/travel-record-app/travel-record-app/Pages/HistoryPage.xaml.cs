@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+// using .. SQLiteConnection
 
 using Xamarin.Forms;
 
@@ -29,10 +30,11 @@ namespace travel_record_app.Pages
 			{
                 conn.CreateTable<Post>(); // todo: will only create-table if it doesn't already exist
 
-                var posts = conn.Table<Post>().ToList();
+                var posts = conn.Table<Post>()
+								.ToList();
 				// conn.Close(); // * conn is closed by default after using-scope
 
-				PostListView.ItemSource = posts; // set ListView's data-context (data-binding for its ItemTemplate > DataTemplate)
+				PostListView.ItemsSource = posts; // set ListView's data-context (data-binding for its ItemTemplate > DataTemplate)
             }
 		}
 
