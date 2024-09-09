@@ -1,46 +1,65 @@
 ﻿<Properties StartupConfiguration="{08C267A3-52ED-49BD-A440-D963F73AEFB5}|Default">
-  <MonoDevelop.Ide.ItemProperties.travel-record-app.iOS FirstBuild="True" />
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.travel-record-app.Android PreferredExecutionTarget="Android.Pixel_3a_API_32_arm64-v8a" FirstBuild="True" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="travel-record-app/travel-record-app/Pages/MapPage.xaml.cs">
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.Pixel_3a_API_32_arm64-v8a" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.travel-record-app.iOS FirstBuild="True" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="travel-record-app/travel-record-app/App.xaml">
     <Files>
+      <File FileName="travel-record-app/travel-record-app/Setup/setup.txt" Line="16" Column="1" />
       <File FileName="travel-record-app/travel-record-app/AssemblyInfo.cs" />
-      <File FileName="travel-record-app/travel-record-app/App.xaml" />
-      <File FileName="travel-record-app/travel-record-app/App.xaml.cs" />
-      <File FileName="travel-record-app/travel-record-app/MainPage.xaml.cs" />
-      <File FileName="travel-record-app/travel-record-app/Pages/LoginPage.xaml" />
-      <File FileName="travel-record-app/travel-record-app/Pages/LoginPage.xaml.cs" />
-      <File FileName="travel-record-app/travel-record-app/Pages/HomePage.xaml" />
-      <File FileName="travel-record-app/travel-record-app/Pages/HomePage.xaml.cs" />
-      <File FileName="travel-record-app/travel-record-app/Models/Post.cs" />
-      <File FileName="travel-record-app/travel-record-app/Pages/NewTravelPage.xaml" />
-      <File FileName="travel-record-app/travel-record-app/Pages/NewTravelPage.xaml.cs" />
-      <File FileName="travel-record-app/travel-record-app/Pages/HistoryPage.xaml" />
-      <File FileName="travel-record-app/travel-record-app/Pages/HistoryPage.xaml.cs" />
-      <File FileName="travel-record-app/travel-record-app/Pages/MapPage.xaml" />
-      <File FileName="travel-record-app/travel-record-app/Pages/MapPage.xaml.cs" Line="38" Column="1" />
+      <File FileName="travel-record-app/travel-record-app/App.xaml" Line="34" Column="1" />
+      <File FileName="travel-record-app/travel-record-app/App.xaml.cs" Line="46" Column="1" />
+      <File FileName="travel-record-app/travel-record-app/MainPage.xaml" Line="1" Column="1" />
+      <File FileName="travel-record-app/travel-record-app/MainPage.xaml.cs" Line="20" Column="1" />
+      <File FileName="travel-record-app/travel-record-app/Pages/LoginPage.xaml" Line="17" Column="1" />
+      <File FileName="travel-record-app/travel-record-app/Pages/LoginPage.xaml.cs" Line="46" Column="1" />
+      <File FileName="travel-record-app/travel-record-app/Pages/HomePage.xaml" Line="23" Column="39" />
+      <File FileName="travel-record-app/travel-record-app/Pages/HomePage.xaml.cs" Line="8" Column="26" />
+      <File FileName="travel-record-app/travel-record-app/Models/Post.cs" Line="11" Column="4" />
+      <File FileName="travel-record-app/travel-record-app/Pages/NewTravelPage.xaml" Line="6" Column="1" />
+      <File FileName="travel-record-app/travel-record-app/Pages/NewTravelPage.xaml.cs" Line="35" Column="1" />
+      <File FileName="travel-record-app/travel-record-app/Pages/HistoryPage.xaml" Line="1" Column="1" />
+      <File FileName="travel-record-app/travel-record-app/Pages/HistoryPage.xaml.cs" Line="44" Column="1" />
+      <File FileName="travel-record-app/travel-record-app/Pages/MapPage.xaml" Line="20" Column="1" />
+      <File FileName="travel-record-app/travel-record-app/Pages/MapPage.xaml.cs" Line="81" Column="31" />
+      <File FileName="travel-record-app/travel-record-app/Helpers/Constants.cs" Line="14" Column="1" />
+      <File FileName="travel-record-app/travel-record-app/Models/Venue.cs" Line="5" Column="1" />
+      <File FileName="travel-record-app/travel-record-app/Logic/VenueLogic.cs" Line="34" Column="14" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="travel-record-app" expanded="True">
             <Node name="travel-record-app" expanded="True">
+              <Node name="Assets" expanded="True">
+                <Node name="Images" expanded="True" />
+              </Node>
+              <Node name="Helpers" expanded="True" />
+              <Node name="Logic" expanded="True" />
               <Node name="Models" expanded="True" />
-              <Node name="Pages" expanded="True" />
+              <Node name="Pages" expanded="True">
+                <Node name="HistoryPage.xaml" expanded="True" />
+                <Node name="HomePage.xaml" expanded="True" />
+                <Node name="LoginPage.xaml" expanded="True" />
+                <Node name="MapPage.xaml" expanded="True" />
+                <Node name="NewTravelPage.xaml" expanded="True" />
+              </Node>
               <Node name="Setup" expanded="True" />
+              <Node name="App.xaml" expanded="True" selected="True" />
+              <Node name="MainPage.xaml" expanded="True" />
             </Node>
             <Node name="travel-record-app.Android" expanded="True" />
-            <Node name="travel-record-app.iOS" expanded="True" />
+            <Node name="travel-record-app.iOS" expanded="True">
+              <Node name="Resources" expanded="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.travel-record-app FirstBuild="True" />
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.Pixel_3a_API_32_arm64-v8a" />
+  <MonoDevelop.Ide.ItemProperties.travel-record-app.Android PreferredExecutionTarget="Android.Pixel_3a_API_32_arm64-v8a" FirstBuild="True" />
 </Properties>
