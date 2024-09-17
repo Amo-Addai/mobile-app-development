@@ -10,7 +10,7 @@
         "eject": "expo eject"
     },
     "dependencies": {
-
+        // TODO: install - react, react-native, react-native-paper, expo-constants, expo-keep-awake, 
     },
     "devDependencies": {
 
