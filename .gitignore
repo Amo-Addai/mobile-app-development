@@ -13,6 +13,7 @@ node_modules/
 .editorconfig
 .hintrc
 .DS_STORE
+.DS_Store
 .eslintrc.js
 .prettierrc
 .env.*
@@ -208,7 +209,8 @@ geckodriver.log
 *.exe
 
 # Mac
-**/.DS_Store
+**/.DS_STORE
+.DS_Store
 
 *.pyc
 
@@ -505,6 +507,7 @@ fastlane/test_output/
 *.xcarchive
 
 # macOS specific files
+.DS_STORE
 .DS_Store
 .AppleDouble
 .LSOverride
@@ -658,6 +661,7 @@ build/
 .idea/tasks.xml
 
 # MacOS specific files
+.DS_STORE
 .DS_Store
 .AppleDouble
 .LSOverride
@@ -812,6 +816,7 @@ pubspec.lock
 .packages
 
 # macOS files
+.DS_STORE
 .DS_Store
 .AppleDouble
 .LSOverride
@@ -1067,6 +1072,7 @@ bower_components/
 
 # macOS specific
 ################
+.DS_STORE
 .DS_Store
 .AppleDouble
 .LSOverride
