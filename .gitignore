@@ -10,6 +10,7 @@ node_modules
 node_modules/
 .history/
 .vscode/
+.idea/
 .editorconfig
 .hintrc
 .DS_STORE
@@ -30,6 +31,7 @@ node_modules/
 
 .history/
 .vscode/
+.idea/
 node_modules/
 
 # Byte-compiled / optimized / DLL files
@@ -231,9 +233,11 @@ geckodriver.log
 
 # User-specific folders
 .vscode/
+.idea/
 .vs/
 .idea/
-.vscode/*
+.vscode/
+.idea/*
 
 # Mono auto generated files
 mono_crash.*
@@ -251,6 +255,7 @@ $RECYCLE.BIN/
 # VS Code directories
 .history/
 .vscode/
+.idea/
 
 # Windows Installer files
 *.cab
@@ -291,7 +296,8 @@ local.settings.json
 StyleCopReport.xml
 
 # VS Code extension folder
-.vscode/extensions.json
+.vscode/
+.idea/extensions.json
 
 #######################
 # C# Language Specific #
@@ -299,10 +305,13 @@ StyleCopReport.xml
 
 # Visual Studio 2019+ common files
 .vscode/
-.vscode/*
+.idea/
+.vscode/
+.idea/*
 *.vscode*
 .vscode-test/
-.vscode/*log
+.vscode/
+.idea/*log
 
 # Rider IDE
 .idea/
@@ -347,9 +356,12 @@ HostingStartup.cs
 *.dll
 
 # .NET Core Debugger files
-.vscode/launch.json
-.vscode/tasks.json
-.vscode/omniSharp.json
+.vscode/
+.idea/launch.json
+.vscode/
+.idea/tasks.json
+.vscode/
+.idea/omniSharp.json
 
 # Package directories
 .nuget/
@@ -868,10 +880,15 @@ pubspec.lock
 
 # VS Code
 .vscode/
-.vscode/settings.json
-.vscode/tasks.json
-.vscode/launch.json
-.vscode/extensions.json
+.idea/
+.vscode/
+.idea/settings.json
+.vscode/
+.idea/tasks.json
+.vscode/
+.idea/launch.json
+.vscode/
+.idea/extensions.json
 
 # IntelliJ IDEA
 .idea/
@@ -1061,14 +1078,21 @@ bower_components/
 
 # Visual Studio Code
 .vscode/
-.vscode/*
+.idea/
+.vscode/
+.idea/*
 .history/
 .settings/
-.vscode/settings.json
-.vscode/tasks.json
-.vscode/launch.json
-.vscode/extensions.json
-.vscode/.settings/
+.vscode/
+.idea/settings.json
+.vscode/
+.idea/tasks.json
+.vscode/
+.idea/launch.json
+.vscode/
+.idea/extensions.json
+.vscode/
+.idea/.settings/
 
 # macOS specific
 ################
@@ -1111,6 +1135,7 @@ Temporary Items
 # IDE specific project files
 ############################
 .vscode/
+.idea/
 .idea/
 
 # Dependency directories
