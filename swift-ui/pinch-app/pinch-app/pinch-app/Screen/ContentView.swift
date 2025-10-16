@@ -17,6 +17,13 @@ struct ContentView: View {
     
 //    MARK: Function
     
+    func resetImageState() {
+        return withAnimation(.spring()) {
+            imageScale = 1
+            imageOffset = .zero
+        }
+    }
+    
 //    MARK: Content
     
     var body: some View {
@@ -39,13 +46,32 @@ struct ContentView: View {
                                 imageScale = 5
                             }
                         } else {
-                            withAnimation(.spring()) {
-                                imageScale = 1
-                            }
+                            resetImageState()
+//                            or:
+//                            withAnimation(.spring()) {
+//                                imageScale = 1
+//                            }
                         }
                     })
                 // MARK: 2. Drag Gesture
-                
+                    .gesture(
+                        DragGesture()
+                            .onChanged { value in
+                                withAnimation(.linear(duration: 1)) {
+                                    imageOffset = value.translation
+                                }
+                            }
+                            .onEnded { _ in
+                                if imageScale <= 1 {
+                                    resetImageState()
+//                                    or:
+//                                    withAnimation(.spring()) {
+//                                        imageScale = 1
+//                                        imageOffset = .zero
+//                                    }
+                                }
+                            }
+                    )
             } //: ZStack
             .navigationTitle("Pinch & Zoom")
             .navigationBarTitleDisplayMode(.inline)
