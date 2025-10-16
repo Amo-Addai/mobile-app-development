@@ -14,6 +14,7 @@ struct ContentView: View {
     @State private var isAnimating: Bool = false
     @State private var imageScale: CGFloat = 1
     @State private var imageOffset: CGSize = .zero // CGSize(width: 0, height: 0)
+    @State private var isDrawerOpen: Bool = false
     
 //    MARK: Function
     
@@ -40,7 +41,7 @@ struct ContentView: View {
                     .opacity(isAnimating ? 1 : 0)
                     .offset(x: imageOffset.width, y: imageOffset.height)
                     .scaleEffect(imageScale)
-                // MARK: 1. Tap Gesture
+                //                 MARK: 1. Tap Gesture
                     .onTapGesture (count: 2, perform: {
                         if imageScale == 1 {
                             withAnimation(.spring()) {
@@ -48,13 +49,13 @@ struct ContentView: View {
                             }
                         } else {
                             resetImageState()
-//                            or:
-//                            withAnimation(.spring()) {
-//                                imageScale = 1
-//                            }
+                            //                            or:
+                            //                            withAnimation(.spring()) {
+                            //                                imageScale = 1
+                            //                            }
                         }
                     })
-                // MARK: 2. Drag Gesture
+                //                 MARK: 2. Drag Gesture
                     .gesture(
                         DragGesture()
                             .onChanged { value in
@@ -65,11 +66,31 @@ struct ContentView: View {
                             .onEnded { _ in
                                 if imageScale <= 1 {
                                     resetImageState()
-//                                    or:
-//                                    withAnimation(.spring()) {
-//                                        imageScale = 1
-//                                        imageOffset = .zero
-//                                    }
+                                    //                                    or:
+                                    //                                    withAnimation(.spring()) {
+                                    //                                        imageScale = 1
+                                    //                                        imageOffset = .zero
+                                    //                                    }
+                                }
+                            }
+                    )
+                //                MARK: 3. Magnification
+                    .gesture(
+                        MagnificationGesture()
+                            .onChanged { value in
+                                withAnimation(.linear(duration: 1)) {
+                                    if imageScale >= 1 && imageScale <= 5 {
+                                        imageScale = value
+                                    } else if imageScale > 5 {
+                                        imageScale = 5
+                                    }
+                                }
+                            }
+                            .onEnded { _ in
+                                if imageScale > 5 {
+                                    imageScale = 5
+                                } else if imageScale <= 1 {
+                                    resetImageState()
                                 }
                             }
                     )
@@ -137,6 +158,35 @@ struct ContentView: View {
                 }
                     .padding(.bottom, 30)
                 , alignment: .bottom
+            )
+//            MARK: Drawer
+            .overlay(
+                HStack(spacing: 12) {
+//                    MARK: Drawer Handle
+                    Image(systemName: isDrawerOpen ? "chevron.compact.right" : "chevron.compact.left")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 40)
+                        .padding(8)
+                        .foregroundStyle(.secondary)
+                        .onTapGesture(perform: {
+                            withAnimation(.easeOut) {
+                                isDrawerOpen.toggle()
+                            }
+                        })
+                    
+//                    MARK: Thumbnails
+                    Spacer()
+                    
+                }
+                    .padding(EdgeInsets(top: 16, leading: 8, bottom: 16, trailing: 8))
+                    .background(.ultraThinMaterial)
+                    .cornerRadius(12)
+                    .opacity(isAnimating ? 1 : 0)
+                    .frame(width: 260)
+                    .padding(.top, UIScreen.main.bounds.height / 12)
+                    .offset(x: isDrawerOpen ? 20 : 215)
+                , alignment: .topTrailing
             )
         } //: Navigation
         .navigationViewStyle(.stack)
